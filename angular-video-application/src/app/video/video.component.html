@@ -1,0 +1,40 @@
+<div #videoDiv class="wrapper" width=1200 height=600>
+  <div class="video-container">
+     <video id='video' class='video'>
+        <!-- <source src='{{fileData}}' type="video/mp4"> -->
+        <source src='../assets/videoPLAYFOR.mp4' type="video/mp4">
+        Your browser does not support the video tag.
+     </video>
+     <div class="main-container">
+        <div class="progress-container">
+           <!-- <input id='seekslider' type='range' min='0' max='100' value='0' step='1'> -->
+           <progress id="progress-bar" value="0" min="0"></progress>
+           <input id="seek" class="seek" type='range' min='0' max='100' value='0' step='1'>
+           <div class='seek-tooltip' id='seek-tooltip'>00:00:00:00</div>
+        </div>
+        <div id='control-bar' class='control-bar' width="800" height="15">
+           <!-- <button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button> -->
+           <mat-icon class='play-button' aria-hidden="false" aria-label="play button">play_arrow</mat-icon>
+           <mat-icon class='pause-button' aria-hidden="false" aria-label="pause button">pause</mat-icon>
+           <div class="volume-controls">
+              <button data-title="Mute (m)" class="volume-button" id="volume-button">
+                 <mat-icon class='volume-up' aria-hidden="false" aria-label="play button">volume_up</mat-icon>
+                 <mat-icon class='volume-down' aria-hidden="false" aria-label="play button">volume_down</mat-icon>
+                 <mat-icon class='volume-off' aria-hidden="false" aria-label="play button">volume_off</mat-icon>
+                 <mat-icon class='volume-mute' aria-hidden="false" aria-label="play button">volume_mute</mat-icon>
+              </button>
+              <div class='input-div'>
+                 <input class="volume" id="volume" value="1" type="range" max="1" min="0" step="0.01">
+              </div>
+           </div>
+           <div class="timeCode" id="timeCode">00:00:00:00</div>
+           <div class="frameSkip">
+              <mat-icon class='rf-button' aria-hidden="false" aria-label="foward a frame button">arrow_left</mat-icon>
+              <mat-icon class='ff-button' aria-hidden="false" aria-label="rewind a frame button">arrow_right</mat-icon>
+           </div>
+           <button class="playbackSpeed">1x</button>
+           <mat-icon class='fullscreen' aria-hidden="false" aria-label="fullscreen button">fullscreen</mat-icon>
+        </div>
+     </div>
+  </div>
+</div>
